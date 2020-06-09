@@ -106,7 +106,15 @@ $variable = [['1' => 'the', '2' => 'first', '3' => 'm-d', '4' => 'array', '5' =>
 print_r($variable[0]['1']);
 // or use the eco function:
 echo $variable[0]['1'];
+//use the count function to count the elements within the multi-dimensional array
+//example:
+echo count($variable)<br>
+//to add an element to the array, use square bracket confines
+//example:<br>
+$variable[] = ['1' => 'push', '2' => into', '3' => 'it'];
 ?>
-
+//the array_pop funtion is used for moving the last array from an element into a different array<br>
+//example:<br>
+$pop = array_pop($variable);
 </body>
 </html>
