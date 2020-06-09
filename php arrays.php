@@ -79,8 +79,9 @@ $a = ['b' => 'B', 'c' => 'C']; //the variable, the keys and the strings
 print_r($a) //will display the full key and string readout of variable $a 
 echo $a['c'] //will call the value of the key c<br><br><br>
 //MULTI-DIMENSIONAL ARRAYS<br><br>
-//php: the variable, square brackets wih mutiple sets of square brackets inside containing the arrays<br>
-php multi-dimensional example below:<br> 
+//the variable, square brackets wih mutiple sets of square brackets inside containing the indexed or associative arrays<br>
+//multi-dimensional indexed arrays<br>
+example below:<br> 
 < ?php<br>
 $variable = [['the', 'first', 'm-d', 'array', 'set'], ['next', 'is', 'second'], 
 ['now', 'as', 'many', 'more', 'sets', 'as', 'necessary']
@@ -89,8 +90,23 @@ $variable = [['the', 'first', 'm-d', 'array', 'set'], ['next', 'is', 'second'],
 print_r($variable)<br>
 //to display a value or string from one of the arrays:<br>
 print_r($variable[0][0]);<br>
-//the above php sentence will display "the" - the first value from the first array within the multi-dimensional array<br>
-?><br>
+//the above php sentence will display the first value from the first array within the multi-dimensional array"the" - the first value from the first array within the multi-dimensional indexed array<br>
+?><br><br><br>
+//muti-dimensional associated arrays<br>
+//note- in sublimetext php editor, the cursor can be utilized in multiple places by pressing the ctrl key on the keyboard and left clicking the mouse, allowing allowing for multiple data entries at the same time.
+//example:
+< ?php
+$variable = [['1' => 'the', '2' => 'first', '3' => 'm-d', '4' => 'array', '5' => 'set'], 
+['1' => 'next', '2' => 'is', '3' => 'second'], 
+['1' => 'now', '2' => 'as', '3' => 'many', '4' => 'more', '5' => 'sets', '6' => 'as', '7' => 'necessary']
+];
+//to print the array sets to the browser:
+//print_r($variable)
+//to display the first value from the first array:
+print_r($variable[0]['1']);
+// or use the eco function:
+echo $variable[0]['1'];
+?>
 
 </body>
 </html>
