@@ -20,4 +20,6 @@ Feel free to use download a copy
 
 
 To Do:
-Indices or the ^ (exponent to the power of/ pow for short) is not defined on the internet -Wiki is missing, as well
+^ is ** in php mathmatics
+Indices or the ^ (exponent to the power of/ pow for short) is not defined on the internet -Wiki is missing
+
