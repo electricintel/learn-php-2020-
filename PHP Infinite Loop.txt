@@ -1,0 +1,24 @@
+Infinite loop
+* Do Not Run!?
+
+
+<?php
+
+$products = ['do', 'not', 'use', 'this', 'indexed', 'array', 'an', 'associative', 'array','nor', 'a', 'multi', 'dimensional','array', 'with', 'the', 'equation', 'below', 'without', 'knowing', 'your', 'calculator', 'might', 'break'];
+
+$x = 0;
+while ($x > count($products)){
+echo '<br />':
+}
+?>
+
+
+
+$products = ['an', 'array', 'comma', 'indexed', 'associative', 'or', 'multi', 'dimensional'];
+//$i is the set variable and zero is the value
+$x = 0;
+//the while function example below loops the count statement "repeat the value of $x until $x is greater than the count of $products" - but $x is 0 and the count will go forever.
+while ($x > count($products)){
+//the echo statement below starts the calculation for the while function
+echo '<br />':
+}
