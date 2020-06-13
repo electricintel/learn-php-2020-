@@ -1,0 +1,66 @@
+https://stackoverflow.com/questions/46624785/saving-html-form-data-to-xml-file
+
+note: you must have a webserver installed with an htdocs folder and a document editor such as notepad or wordpad
+
+1.Copy and paste the code (everything between the first < and last > below into a document editor and save it in  the htdocs folder as 
+
+yourform.html
+____________________________________________________________________________________________________________________________________
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body align=center>
+	<br><br>
+	<h1>https://stackoverflow.com/questions/46624785/saving-html-form-data-to-xml-file</h1>
+	<br><br>
+<form action='e.php' method='POST'>
+car <input type='text' name='car'>
+<br />
+bike <input type='text' name='bike'>
+<input type='submit' name='submit' value='submit'>
+</form>
+</html>
+_____________________________________________________________________________________________________________________________________
+
+
+2.Copy and paste the code below into a document editor and save it as 
+
+showXML.php
+______________________________________________________________________________________________________________________________________
+<?php
+if(isset($_POST['submit']))
+{
+$xml = new SimpleXMLElement("<?xml version=\"1.0\" encoding=\"utf-8\" ?><miles></miles>");
+
+    $xml->addChild('car', $_POST['car']);
+    $xml->addChild('bike', $_POST['bike']);
+
+    $asXML = $xml->asXML();
+    $file = fopen("data.xml","w+");
+    fwrite($file,$asXML);
+    fclose($file); 
+    print_r(error_get_last());
+
+    if(file_exists('./data.xml'))
+    {
+        $myXML = file_get_contents('./data.xml');
+        $xml = new SimpleXMLElement($myXML);
+        $xmlpretty = $xml->asXML();
+
+        // pretty print the XML in browser
+        header('content-type: text/xml');
+        echo $xmlpretty;
+    }
+
+}
+?>
+______________________________________________________________________________________________________________________________________
+
+3.Open your document editor and create a file named data.xml
+
+
+4.Open your htdocs folder and (left click on to) open the yourform.html file
+
+5.Fill in the blanks and left click the submit button to display the file.
